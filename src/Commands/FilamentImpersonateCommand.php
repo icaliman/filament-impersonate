@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace XliteDev\FilamentImpersonate\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentImpersonateCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-impersonate';
 
     public $description = 'My command';
 

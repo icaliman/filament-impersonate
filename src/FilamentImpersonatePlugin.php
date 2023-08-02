@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace XliteDev\FilamentImpersonate;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class SkeletonPlugin implements Plugin
+class FilamentImpersonatePlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'skeleton';
+        return 'filament-impersonate';
     }
 
     public function register(Panel $panel): void
