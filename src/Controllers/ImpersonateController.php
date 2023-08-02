@@ -12,14 +12,14 @@ class ImpersonateController
     public static function allowed($current, $target): bool
     {
         return $current->isNot($target)
-            && !app(ImpersonateManager::class)->isImpersonating()
-            && (!method_exists($current, 'canImpersonate') || $current->canImpersonate())
-            && (!method_exists($target, 'canBeImpersonated') || $target->canBeImpersonated());
+            && ! app(ImpersonateManager::class)->isImpersonating()
+            && (! method_exists($current, 'canImpersonate') || $current->canImpersonate())
+            && (! method_exists($target, 'canBeImpersonated') || $target->canBeImpersonated());
     }
 
-    public static function impersonate($record): bool|Redirector|RedirectResponse
+    public static function impersonate($record): bool | Redirector | RedirectResponse
     {
-        if (!static::allowed(Filament::auth()->user(), $record)) {
+        if (! static::allowed(Filament::auth()->user(), $record)) {
             return false;
         }
 
@@ -38,9 +38,9 @@ class ImpersonateController
         return redirect(config('filament-impersonate.redirect_to'));
     }
 
-    public static function leave(): bool|Redirector|RedirectResponse
+    public static function leave(): bool | Redirector | RedirectResponse
     {
-        if (!app(ImpersonateManager::class)->isImpersonating()) {
+        if (! app(ImpersonateManager::class)->isImpersonating()) {
             return redirect('/');
         }
 

@@ -14,7 +14,6 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use XliteDev\FilamentImpersonate\Commands\FilamentImpersonateCommand;
-use XliteDev\FilamentImpersonate\Testing\TestsFilamentImpersonate;
 
 class FilamentImpersonateServiceProvider extends PackageServiceProvider
 {
